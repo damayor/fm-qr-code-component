@@ -18,14 +18,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
       .outfit-bold {
         font-family: "Outfit", sans-serif;
         font-optical-sizing: auto;
@@ -71,7 +63,7 @@
         height: 95vh;
       }
 
-      .qr__container {
+      .card__container {
         background: var(--cl-white);
         width: 320px;
         height: 500px;
@@ -84,25 +76,40 @@
         margin-bottom: 5vh;
       }
 
-      .qr__img {
+      .card__qr {
         border-radius: 20px;
       }
 
-      .qr__header,
-      .qr__text {
+      .card__header,
+      .card__text {
         text-align: center;
         margin: 0 var(--spacing-200);
+      }
+
+      @media (max-width: 375px) {
+        .card__container {
+          width: 80vw;
+          height: 70vh;
+        }
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
   <body>
-    <div class="qr__container">
-      <img src="./images/image-qr-code.png" alt="" class="qr__img" />
+    <div class="card__container">
+      <img src="./images/image-qr-code.png" alt="" class="card__qr" />
 
-      <h2 class="qr__header outfit-bold">
+      <h2 class="card__header outfit-bold">
         Improve your front-end skills by building projects
       </h2>
-      <p class="qr__text outfit-regular">
+      <p class="card__text outfit-regular">
         Scan the QR code to visit Frontend Mentor and take your coding skills to
         the next level
       </p>
